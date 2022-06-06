@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="PHP_CodeSniffer" xsi:noNamespaceSchemaLocation="phpcs.xsd">
+    <description>Our standard for PHP projects</description>
+
+    <file>app</file>
+    <file>database</file>
+    <file>resources</file>
+    <file>routes</file>
+    <file>tests</file>
+    <file>config</file>
+
+    <arg name="basepath" value="."/>
+    <arg name="colors"/>
+    <arg name="parallel" value="75"/>
+    <arg value="np"/>
+
+    <rule ref="PEAR">
+        <!-- Not picky about doc comments, but I'd prefer to have SOME comment, in any type, on each function, so working around it -->
+        <exclude name="PEAR.Commenting.ClassComment"/>
+        <exclude name="PEAR.Commenting.FileComment"/>
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamType"/>
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
+        <exclude name="PEAR.Commenting.FunctionComment.MissingReturn"/>
+        <exclude name="PEAR.Commenting.FunctionComment.WrongStyle"/>
+        <exclude name="PEAR.Commenting.FunctionComment.MissingParamTag"/>
+        <exclude name="PEAR.Commenting.FunctionComment.SpacingAfterParamName"/>
+        <exclude name="Generic.Commenting.DocComment.TagValueIndent"/>
+        <exclude name="Generic.Commenting.DocComment.NonParamGroup"/>
+        <exclude name="Generic.Commenting.DocComment.ContentBeforeClose"/>
+        <exclude name="Generic.Commenting.DocComment.ContentAfterOpen"/>
+        <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
+        <exclude name="Generic.Commenting.DocComment.MissingShort"/>
+
+        <!-- I don't hate certain shortenings -->
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+        <exclude name="PEAR.WhiteSpace.ScopeClosingBrace.Line"/>
+        <exclude name="Generic.PHP.DisallowShortOpenTag.EchoFound"/>
+
+        <!-- General disagreements (some Laravel and/or Sharp things) -->
+        <exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
+        <exclude name="PEAR.Files.IncludingFile.UseInclude"/>
+        <exclude name="PEAR.Functions.FunctionDeclaration.SpaceAfterFunction"/>
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+        <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+        <exclude name="PSR12.Classes.ClassInstantiation.MissingParentheses"/>
+        <exclude name="PSR12.Files.FileHeader.SpacingInsideBlock"/>
+        <exclude name="PSR12.Traits.UseDeclaration.MultipleImport"/>
+
+        <!-- Squiz you are crazy -->
+        <exclude name="Squiz.Commenting.DocCommentAlignment.SpaceBeforeStar"/>
+        <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
+        <exclude name="Squiz.WhiteSpace.MemberVarSpacing.FirstIncorrect"/>
+        <exclude name="Squiz.WhiteSpace.MemberVarSpacing.AfterComment"/>
+        <exclude name="Squiz.WhiteSpace.ObjectOperatorSpacing.Before"/>
+        <!-- I'm of two minds about this one, run occasionally but not always -->
+        <!-- <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.NoLineAfterClose"/> -->
+
+    </rule>
+
+    <!-- Include some sniffs from other standards -->
+    <rule ref="Squiz.WhiteSpace.CastSpacing"/>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing"/>
+    <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace"/>
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
+    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
+    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing"/>
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+    <rule ref="Squiz.WhiteSpace.PropertyLabelSpacing"/>
+    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace"/>
+    <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Generic.Commenting.Todo"/>
+    <rule ref="Generic.ControlStructures.DisallowYodaConditions"/>
+    <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+    <rule ref="Generic.Formatting.SpaceAfterCast"/>
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.LowerCaseKeyword"/>
+    <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
+    <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/>
+    <rule ref="PSR2.Classes.PropertyDeclaration"/>
+    <rule ref="PSR2.Methods.MethodDeclaration"/>
+    <rule ref="PSR2.Files.EndFileNewline"/>
+    <rule ref="PSR12.Files.OpenTag"/>
+    <rule ref="Zend.Files.ClosingTag"/>
+</ruleset>
