@@ -43,6 +43,7 @@ return new class extends Migration
                 $table->boolean('is_fixed')->nullable()->default(false);
                 $table->text('notes')->nullable();
                 $table->json('id_tags')->nullable();
+                $table->json('attributes')->nullable();
                 $table->json('data')->nullable();
                 $table->timestamps();
                 $table->softDeletes();

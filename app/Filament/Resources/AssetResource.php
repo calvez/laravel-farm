@@ -18,6 +18,7 @@ use Filament\Tables;
 use Filament\Tables\Columns\ColorColumn;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\Layout;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class AssetResource extends Resource
 {
@@ -48,8 +49,21 @@ class AssetResource extends Resource
                                 TextInput::make('name')->required(),
                                 TextInput::make('identification')->required(),
                             ]
-                        )
-                        ->columns(1),
+                        ),
+                    Repeater::make('attributes')
+                        ->schema(
+                            [
+                                TextInput::make('attribute')->required(),
+                                TextInput::make('value')->required(),
+                            ]
+                        ),
+                    SpatieMediaLibraryFileUpload::make('attachments')
+                        ->multiple()
+                        ->responsiveImages(),
+                    SpatieMediaLibraryFileUpload::make('files')
+                        ->multiple()
+                        ->enableReordering()
+                        ->columns(1)
                 ]
             );
     }
@@ -68,6 +82,7 @@ class AssetResource extends Resource
                 Filter::make('is_location')->toggle(),
             ])
             ->actions([
+                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -97,6 +112,7 @@ class AssetResource extends Resource
         return [
             'index' => Pages\ListAssets::route('/'),
             'create' => Pages\CreateAsset::route('/create'),
+            'view' => Pages\ViewAsset::route('/{record}'),
             'edit' => Pages\EditAsset::route('/{record}/edit'),
         ];
     }

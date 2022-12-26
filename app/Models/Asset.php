@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Asset extends Model
+class Asset extends Model implements HasMedia
 {
-    use HasFactory;
-    use SoftDeletes;
+    use InteractsWithMedia;
+    use HasFactory, SoftDeletes;
+
 
     protected $fillable = [
         'name',
@@ -19,6 +22,8 @@ class Asset extends Model
         'is_fixed',
         'flag_id',
         'status',
+        'attachments',
+        'media'
     ];
 
     protected $casts = [

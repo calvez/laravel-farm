@@ -7,7 +7,9 @@
     "require": {
         "php": "^8.0.2",
         "bezhansalleh/filament-language-switch": "^1.0",
+        "buildix/timex": "^1.1",
         "filament/filament": "^2.0",
+        "filament/spatie-laravel-media-library-plugin": "^2.0",
         "filipfonal/filament-log-manager": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel-frontend-presets/tall": "^5.0",
@@ -16,7 +18,8 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.10",
         "phpsa/filament-authentication": "^2.3",
-        "spatie/laravel-activitylog": "^4.7"
+        "spatie/laravel-activitylog": "^4.7",
+        "spatie/laravel-medialibrary": "^10.7"
     },
     "require-dev": {
         "doctrine/dbal": "^3.5",

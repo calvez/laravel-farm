@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
                 AssetTypeSeeder::class,
                 FlagSeeder::class,
                 AnimalTypeSeeder::class,
+                LogCategorySeeder::class,
                 UserSeeder::class,
             ]
         );
