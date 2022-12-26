@@ -6,6 +6,7 @@ use App\Filament\Resources\AssetResource\Pages;
 use App\Filament\Resources\AssetResource\RelationManagers;
 use App\Models\Asset;
 use App\Models\AssetType;
+use App\Models\Flag;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -39,7 +40,7 @@ class AssetResource extends Resource
                     Toggle::make('is_location')->inline(),
                     Select::make('flag_id')
                         ->label('Flag')
-                        ->options(AssetType::all()->pluck('name', 'id'))
+                        ->options(Flag::all()->pluck('name', 'id'))
                         ->searchable()->required(),
                     Repeater::make('id_tags')
                         ->schema(
@@ -59,6 +60,7 @@ class AssetResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('notes'),
+                Tables\Columns\TextColumn::make('flag_id')
             ])
             ->filters([
                 //
