@@ -9,6 +9,8 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Forms\Components\ColorPicker;
+use Filament\Tables\Columns\ColorColumn;
 
 class FlagResource extends Resource
 {
@@ -23,6 +25,7 @@ class FlagResource extends Resource
                 [
                     Forms\Components\TextInput::make('name')->required(),
                     Forms\Components\MarkdownEditor::make('description')->required(),
+                    ColorPicker::make('color')->rgb()
                 ]
             );
     }
@@ -33,6 +36,7 @@ class FlagResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('description'),
+                ColorColumn::make('color')
             ])
             ->filters([
                 //

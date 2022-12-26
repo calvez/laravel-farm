@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('flags', function (Blueprint $table) {
+        Schema::create('animal_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100)->nullable()->default('flag');
+            $table->string('name', 256);
             $table->text('description')->nullable();
-            $table->string('color', 32)->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('flags');
+        Schema::dropIfExists('animal_types');
     }
 };
