@@ -10,6 +10,6 @@ class Flag extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'description', 'color'
+        'name', 'description', 'color',
     ];
 }

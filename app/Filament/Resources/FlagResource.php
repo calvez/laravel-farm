@@ -5,11 +5,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\FlagResource\Pages;
 use App\Models\Flag;
 use Filament\Forms;
+use Filament\Forms\Components\ColorPicker;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Forms\Components\ColorPicker;
 use Filament\Tables\Columns\ColorColumn;
 use Filament\Tables\Filters\Layout;
 
@@ -26,7 +26,7 @@ class FlagResource extends Resource
                 [
                     Forms\Components\TextInput::make('name')->required(),
                     Forms\Components\MarkdownEditor::make('description')->required(),
-                    ColorPicker::make('color')->rgb()
+                    ColorPicker::make('color')->rgb(),
                 ]
             );
     }
@@ -37,7 +37,7 @@ class FlagResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('description'),
-                ColorColumn::make('color')
+                ColorColumn::make('color'),
             ])
             ->filters([
                 //
@@ -61,6 +61,7 @@ class FlagResource extends Resource
     {
         return Layout::AboveContent;
     }
+
     public static function getPages(): array
     {
         return [
