@@ -27,7 +27,7 @@ return new class extends Migration
         Schema::create(
             'assets',
             function (Blueprint $table) {
-                $table->uuid('id')->primary();
+                $table->id();
                 $table->string('name', 256)->nullable()->default('name');
                 $table->enum(
                     'status',
@@ -35,11 +35,24 @@ return new class extends Migration
                         'active', 'archived',
                     ]
                 )->nullable();
-                $table->uuid('type_id');
+                $table->unsignedBigInteger('type_id');
+                $table->json('geometry')->nullable();
+                $table->json('intrinsic_geometry')->nullable();
+                $table->boolean('is_location')->nullable()->default(false);
+                $table->unsignedBigInteger('flag_id');
+                $table->boolean('is_fixed')->nullable()->default(false);
+                $table->text('notes')->nullable();
+                $table->json('id_tags')->nullable();
+                $table->json('data')->nullable();
                 $table->timestamps();
+                $table->softDeletes();
 
                 $table->foreign('type_id')
                     ->references('id')->on('asset_types')
+                    ->onDelete('cascade');
+
+                $table->foreign('flag_id')
+                    ->references('id')->on('flags')
                     ->onDelete('cascade');
             }
         );

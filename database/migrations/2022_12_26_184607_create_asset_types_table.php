@@ -14,10 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('asset_types', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('name')->nullable()->default('asset type name');
             $table->text('description')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
