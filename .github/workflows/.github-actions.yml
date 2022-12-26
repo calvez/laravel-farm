@@ -147,7 +147,6 @@ jobs:
           php -v
           php artisan migrate --force
           php artisan key:generate
-          php artisan passport:install
           ./vendor/phpunit/phpunit/phpunit --version
           phpdbg -qrr ./vendor/phpunit/phpunit/phpunit -v --colors=never --stderr --coverage-clover=coverage.xml
           export CODECOV_TOKEN=${{ secrets.CODECOV_TOKEN }}
