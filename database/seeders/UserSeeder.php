@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
@@ -19,9 +18,9 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'name' => 'admin',
-                'email'      => 'admin@larafarm.com',
+                'email' => 'admin@larafarm.com',
                 'email_verified_at' => now(),
-                'password'   => 'admin1234!',
+                'password' => 'admin1234!',
             ],
         ];
         foreach ($users as $user) {
