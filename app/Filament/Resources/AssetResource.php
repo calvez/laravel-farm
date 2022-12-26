@@ -57,7 +57,7 @@ class AssetResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('notes'),
-                Tables\Columns\TextColumn::make('flag_id')
+                Tables\Columns\TextColumn::make('flag_id'),
             ])
             ->filters([
                 //
