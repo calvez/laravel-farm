@@ -15,6 +15,9 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\ColorColumn;
+use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\Layout;
 
 class AssetResource extends Resource
 {
@@ -58,10 +61,11 @@ class AssetResource extends Resource
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('notes'),
                 Tables\Columns\TextColumn::make('type_id'),
-                Tables\Columns\TextColumn::make('flag_id')
+                ColorColumn::make('flag_id')
             ])
             ->filters([
-                //
+                Filter::make('is_fixed')->toggle(),
+                Filter::make('is_location')->toggle(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -71,11 +75,21 @@ class AssetResource extends Resource
             ]);
     }
 
+    protected function getTableFiltersLayout(): ?string
+    {
+        return Layout::AboveContent;
+    }
+
     public static function getRelations(): array
     {
         return [
             //
         ];
+    }
+
+    protected function getTableFiltersFormWidth(): string
+    {
+        return '2xl';
     }
 
     public static function getPages(): array

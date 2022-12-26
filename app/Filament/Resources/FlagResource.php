@@ -11,6 +11,7 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Forms\Components\ColorPicker;
 use Filament\Tables\Columns\ColorColumn;
+use Filament\Tables\Filters\Layout;
 
 class FlagResource extends Resource
 {
@@ -56,6 +57,10 @@ class FlagResource extends Resource
         ];
     }
 
+    protected function getTableFiltersLayout(): ?string
+    {
+        return Layout::AboveContent;
+    }
     public static function getPages(): array
     {
         return [
