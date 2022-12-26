@@ -61,7 +61,7 @@ class AssetResource extends Resource
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('notes'),
                 Tables\Columns\TextColumn::make('type_id'),
-                ColorColumn::make('flag_id')
+                ColorColumn::make('flag_id'),
             ])
             ->filters([
                 Filter::make('is_fixed')->toggle(),
