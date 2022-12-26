@@ -3,21 +3,18 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\AssetResource\Pages;
-use App\Filament\Resources\AssetResource\RelationManagers;
 use App\Models\Asset;
 use App\Models\AssetType;
 use App\Models\Flag;
 use Filament\Forms;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Filament\Forms\Components\Toggle;
-use Filament\Forms\Components\Repeater;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
 
 class AssetResource extends Resource
 {
@@ -49,7 +46,7 @@ class AssetResource extends Resource
                                 TextInput::make('identification')->required(),
                             ]
                         )
-                        ->columns(1)
+                        ->columns(1),
                 ]
             );
     }

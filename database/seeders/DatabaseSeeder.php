@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             [
                 AssetTypeSeeder::class,
                 FlagSeeder::class,
-                UserSeeder::class
+                UserSeeder::class,
             ]
         );
     }
