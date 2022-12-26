@@ -139,7 +139,7 @@ jobs:
 
       - name: Create temp database
         run: |
-          mysql --host 127.0.0.1 -uroot -proot -e "CREATE DATABASE IF NOT EXISTS laravel_db"
+          mysql --host 127.0.0.1 -uroot -proot -e "CREATE DATABASE IF NOT EXISTS testing"
 
       - name: Execute tests
         run: |
