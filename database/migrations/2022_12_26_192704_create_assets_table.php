@@ -13,7 +13,6 @@ return new class extends Migration
      */
     public function up()
     {
-
         // Name
         // Status
         // Flags
@@ -33,7 +32,7 @@ return new class extends Migration
                 $table->enum(
                     'status',
                     [
-                        'active', 'archived'
+                        'active', 'archived',
                     ]
                 )->nullable();
                 $table->uuid('type_id');

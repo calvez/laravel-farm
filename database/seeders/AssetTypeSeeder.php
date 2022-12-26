@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -13,7 +12,6 @@ class AssetTypeSeeder extends Seeder
      *
      * @return void
      */
-
     public function run()
     {
         DB::table('asset_types')->insertOrIgnore(['name' => 'Land']);
