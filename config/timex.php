@@ -40,7 +40,7 @@ return [
 
     'week' => [
         'start' => Carbon::MONDAY,
-        'end' =>  Carbon::SUNDAY
+        'end' => Carbon::SUNDAY,
     ],
     'isDayClickEnabled' => true,
 
@@ -71,7 +71,7 @@ return [
         'icon' => [
             'static' => true,
             'timex' => 'timex-timex',
-            'day' => 'timex-day-'
+            'day' => 'timex-day-',
         ],
         'label' => [
             'navigation' => [
@@ -91,7 +91,7 @@ return [
             'hideYearNavigation' => false,
             'today' => [
                 'static' => false,
-                'format' => 'D MMM'
+                'format' => 'D MMM',
             ],
             'outlined' => true,
             'icons' => [
@@ -99,7 +99,7 @@ return [
                 'nextYear' => 'heroicon-o-chevron-double-right',
                 'previousMonth' => 'heroicon-o-chevron-left',
                 'nextMonth' => 'heroicon-o-chevron-right',
-                'createEvent' => 'heroicon-o-plus'
+                'createEvent' => 'heroicon-o-plus',
             ],
             'modal' => [
                 'submit' => [
@@ -107,7 +107,7 @@ return [
                     'color' => 'primary',
                     'icon' => [
                         'enabled' => true,
-                        'name' => 'heroicon-o-save'
+                        'name' => 'heroicon-o-save',
                     ],
                 ],
                 'cancel' => [
@@ -115,7 +115,7 @@ return [
                     'color' => 'secondary',
                     'icon' => [
                         'enabled' => true,
-                        'name' => 'heroicon-o-x-circle'
+                        'name' => 'heroicon-o-x-circle',
                     ],
                 ],
                 'delete' => [
@@ -123,7 +123,7 @@ return [
                     'color' => 'danger',
                     'icon' => [
                         'enabled' => true,
-                        'name' => 'heroicon-o-trash'
+                        'name' => 'heroicon-o-trash',
                     ],
                 ],
                 'edit' => [
@@ -131,7 +131,7 @@ return [
                     'color' => 'primary',
                     'icon' => [
                         'enabled' => true,
-                        'name' => 'heroicon-o-pencil-alt'
+                        'name' => 'heroicon-o-pencil-alt',
                     ],
                 ],
                 'view' => [

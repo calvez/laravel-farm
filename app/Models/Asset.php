@@ -13,7 +13,6 @@ class Asset extends Model implements HasMedia
     use InteractsWithMedia;
     use HasFactory, SoftDeletes;
 
-
     protected $fillable = [
         'name',
         'notes',
@@ -23,7 +22,7 @@ class Asset extends Model implements HasMedia
         'flag_id',
         'status',
         'attachments',
-        'media'
+        'media',
     ];
 
     protected $casts = [

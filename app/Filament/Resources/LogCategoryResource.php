@@ -3,18 +3,14 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\LogCategoryResource\Pages;
-use App\Filament\Resources\LogCategoryResource\RelationManagers;
 use App\Models\LogCategory;
 use Filament\Forms;
+use Filament\Forms\Components\ColorPicker;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Columns\ColorColumn;
-use Filament\Tables\Filters\Layout;
-use Filament\Forms\Components\ColorPicker;
 
 class LogCategoryResource extends Resource
 {

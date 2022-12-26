@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -15,7 +14,6 @@ class LogCategorySeeder extends Seeder
      */
     public function run()
     {
-
         DB::table('log_categories')->insertOrIgnore(['name' => 'Activities']);
         DB::table('log_categories')->insertOrIgnore(['name' => 'Observations']);
         DB::table('log_categories')->insertOrIgnore(['name' => 'Inputs']);

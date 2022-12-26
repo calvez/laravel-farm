@@ -38,8 +38,8 @@ return [
 
     'locales' => [
         //'ar'          => ['name' => 'Arabic',                 'script' => 'Arab', 'native' => 'العربية', 'flag_code' => 'sa'],
-        'en'          => ['name' => 'English',                'script' => 'Latn', 'native' => 'English', 'flag_code' => 'us'],
-        'fr'          => ['name' => 'French',                 'script' => 'Latn', 'native' => 'français', 'flag_code' => 'fr'],
+        'en' => ['name' => 'English',                'script' => 'Latn', 'native' => 'English', 'flag_code' => 'us'],
+        'fr' => ['name' => 'French',                 'script' => 'Latn', 'native' => 'français', 'flag_code' => 'fr'],
 
         //'ace'         => ['name' => 'Achinese',               'script' => 'Latn', 'native' => 'Aceh', 'flag_code' => ''],
         //'af'          => ['name' => 'Afrikaans',              'script' => 'Latn', 'native' => 'Afrikaans', 'flag_code' => '' ],
@@ -158,7 +158,7 @@ return [
         //'lg'          => ['name' => 'Ganda',                  'script' => 'Latn', 'native' => 'Luganda', 'flag_code' => '' ],
         //'luy'         => ['name' => 'Oluluyia',               'script' => 'Latn', 'native' => 'Luluhia', 'flag_code' => '' ],
         //'lb'          => ['name' => 'Luxembourgish',          'script' => 'Latn', 'native' => 'Lëtzebuergesch', 'flag_code' => '' ],
-        'hu'          => ['name' => 'Hungarian',              'script' => 'Latn', 'native' => 'magyar', 'flag_code' => ''],
+        'hu' => ['name' => 'Hungarian',              'script' => 'Latn', 'native' => 'magyar', 'flag_code' => ''],
         //'mgh'         => ['name' => 'Makhuwa-Meetto',         'script' => 'Latn', 'native' => 'Makua', 'flag_code' => '' ],
         //'mg'          => ['name' => 'Malagasy',               'script' => 'Latn', 'native' => 'Malagasy', 'flag_code' => '' ],
         //'mt'          => ['name' => 'Maltese',                'script' => 'Latn', 'native' => 'Malti', 'flag_code' => '' ],
