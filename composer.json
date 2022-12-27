@@ -9,6 +9,7 @@
         "bezhansalleh/filament-language-switch": "^1.0",
         "buildix/timex": "^1.1",
         "filament/filament": "^2.0",
+        "filament/notifications": "^2.0",
         "filament/spatie-laravel-media-library-plugin": "^2.0",
         "filipfonal/filament-log-manager": "^1.0",
         "guzzlehttp/guzzle": "^7.2",
